@@ -5,16 +5,17 @@
     --light: #ffffff;
 }
 
+html,
 body {
     text-align: center;
-    margin: 10px 10px;
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 20px;
 }
 
 h1 {
     font-size: 40px;
     margin-bottom: 5px;
-    color: rgb(96, 155, 8);
 }
 
 span {
@@ -43,7 +44,6 @@ label {
     align-items: center;
 }
 
-
 .delete-btn:hover,
 .check-box:hover {
     cursor: pointer;
@@ -54,12 +54,20 @@ label {
     width: 15px;
 }
 
+/* Alert element created in App.js styling */
+.alert {
+    color: var(--light);
+    height: 30px;
+    padding: 3px;
+
+}
+
 /* Hide form */
 .form {
     display: none;
 } 
 
-/* Open form */
+/* Open form when add button is cliked*/
 .open-form {
     display: block;
 }
@@ -97,4 +105,28 @@ label {
 .delete-btn {
     background: var(--danger);
     padding:5px 5px;
+    color: var(--light);
 }
+
+@media (max-width: 800px){
+   .container {
+    max-width: 500px;
+    margin: auto;
+} 
+}
+
+@media (min-width: 1000px){
+    .container {
+     max-width: 600px;
+     margin: auto;
+ } 
+ }
+
+ @media (min-width: 1000px){
+    .container {
+     max-width: 1000px;
+     margin: auto;
+ } 
+ }
+
+

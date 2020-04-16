@@ -7,27 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <h1>My<span>Library</span></h1>
+
     <div class="container">
         <input type="submit" value="NEW BOOK" class="add-btn">
         <form class="form">
+
             <div class="fields">
                 <label for="title">Title</label>
                 <input type="text" id="title">
             </div>
+
             <div class="fields">
                 <label for="author">Author</label>
                 <input type="text" id="author">
             </div>
+
             <div class="fields">
                 <label for="pages">Pages</label>
                 <input type="text" id="pages">
             </div>
+
             <div class="fields">
                 <label for="isbn">ISBN#</label>
                 <input type="text" id="isbn">
             </div>
+
             <input type="submit" value="Submit" class="submit-btn">
+
         </form>
 
         <table class="table">
@@ -36,18 +44,22 @@
                     <th>Title</th>
                     <th>Author</th>
                     <th>Pages</th>
-                    <th>ISBN#</th>
                     <th>Read</th>
+                    <th>ISBN#</th>
                     <th></th>
                 </tr>
             </thead>
-            <tbody id="book-list">
 
+<!-- This is where the books will be added using submit in App.js -->           
+            <tbody id="book-list">
             </tbody>
+
         </table>
+
     </div>
     
 
     <script src="app.js"></script>
+
 </body>
 </html>
