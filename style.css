@@ -18,6 +18,16 @@ h1 {
     margin-bottom: 5px;
 }
 
+h1::before {
+    content: '';
+    background-image: url(book-open.svg);
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    display: inline-block;
+    color: var(--main);
+}
+
 span {
     color: var(--main);
 }
