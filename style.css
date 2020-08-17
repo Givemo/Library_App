@@ -1,142 +1,149 @@
 /*CSS Variables*/
 :root {
-    --danger: rgb(255, 0, 0);
-    --main: #044c68;
-    --light: #ffffff;
+  --danger: rgb(255, 0, 0);
+  --main: #044c68;
+  --light: #ffffff;
 }
 
 html,
 body {
-    text-align: center;
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0px 20px;
+  text-align: center;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px 20px;
+}
+body {
+  background: linear-gradient(rgba(11, 11, 17, 0.8), rgba(13, 12, 20, 0.8)),
+    url(/img/web-design-2906159_640.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 h1 {
-    font-size: 40px;
-    margin-bottom: 5px;
+  font-size: 40px;
+  margin-bottom: 5px;
 }
 
 h1::before {
-    content: '';
-    background-image: url(book-open.svg);
-    width: 30px;
-    height: 30px;
-    background-size: contain;
-    display: inline-block;
-    color: var(--main);
+  content: "";
+  background-image: url(book-open.svg);
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  display: inline-block;
+  color: var(--main);
 }
 
 span {
-    color: var(--main);
+  color: var(--main);
 }
 
 #author,
 #title,
 #pages,
 #isbn {
-    width: 100%;
-    margin-bottom: 10px;
-    margin-top: 5px;
-    height: 30px;
-    border: none;
-
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  height: 30px;
+  border: none;
 }
 
 label {
-    float: left;
+  float: left;
 }
 
 #check-box {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .delete-btn:hover,
 .check-box:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.check-box{
-    height: 15px;
-    width: 15px;
+.check-box {
+  height: 15px;
+  width: 15px;
 }
 
 /* Alert element created in App.js styling */
 .alert {
-    color: var(--light);
-    height: 30px;
-    padding: 3px;
-
+  color: var(--light);
+  height: 30px;
+  padding: 3px;
+  border-radius: 5px;
 }
 
 /* Hide form */
 .form {
-    display: none;
-} 
+  display: none;
+  color: var(--light);
+}
 
 /* Open form when add button is cliked*/
 .open-form {
-    display: block;
+  display: block;
 }
 
 .add-btn:hover,
 .submit-btn:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .add-btn,
 .submit-btn {
-    width: 100%;
-    height: 30px;
-    margin: 20px 0px;
-    background: var(--main);
-    color: var(--light);
+  width: 100%;
+  height: 30px;
+  margin: 20px 0px;
+  background: var(--main);
+  color: var(--light);
 }
 
 .table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 12px;
-    text-align: start;
-    color: #363131;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: start;
+  color: var(--light);
 }
 
-.table, th, td {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 8px;
-    text-align: start;
-  }
+.table,
+th,
+td {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: start;
+}
 
 .delete-btn {
-    background: var(--danger);
-    padding:5px 5px;
-    color: var(--light);
+  background: var(--danger);
+  padding: 5px 5px;
+  color: var(--light);
 }
 
-@media (max-width: 800px){
-   .container {
+@media (max-width: 800px) {
+  .container {
     max-width: 500px;
     margin: auto;
-} 
+  }
 }
 
-@media (min-width: 1000px){
-    .container {
-     max-width: 600px;
-     margin: auto;
- } 
- }
+@media (min-width: 1000px) {
+  .container {
+    max-width: 600px;
+    margin: auto;
+  }
+}
 
- @media (min-width: 1000px){
-    .container {
-     max-width: 1000px;
-     margin: auto;
- } 
- }
-
-
+@media (min-width: 1000px) {
+  .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+}

@@ -5,7 +5,7 @@ const submitBtn = document.querySelector('.submit-btn');
 addBtn.addEventListener('click', hideBtn);
 function hideBtn(e) {
     const form = document.querySelector('.form');
-    addBtn.style.display = 'none';
+    addBtn.style.visibility = 'hidden';
     form.classList.add('open-form')
 }
 
@@ -72,11 +72,12 @@ class UI {
         const form = document.querySelector('.form');
         form.classList.remove('open-form');
 
-        addBtn.style.display = 'inline';
-        document.querySelector('#title').value = '';
+        addBtn.style.visibility = 'visible';
+        /*  */document.querySelector('#title').value = '';
         document.querySelector('#author').value = '';
         document.querySelector('#pages').value = '';
         document.querySelector('#isbn').value = '';
+        this.reset();
     }
 }
 

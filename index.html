@@ -1,65 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>My<span>Library</span></h1>
 
     <div class="container">
-        <input type="submit" value="NEW BOOK" class="add-btn">
-        <form class="form">
+      <input type="submit" value="ADD NEW BOOK" class="add-btn" />
+      <form class="form">
+        <div class="fields">
+          <label for="title">Title</label>
+          <input type="text" id="title" placeholder="title" />
+        </div>
 
-            <div class="fields">
-                <label for="title">Title</label>
-                <input type="text" id="title">
-            </div>
+        <div class="fields">
+          <label for="author">Author</label>
+          <input type="text" id="author" placeholder="Author name" />
+        </div>
 
-            <div class="fields">
-                <label for="author">Author</label>
-                <input type="text" id="author">
-            </div>
+        <div class="fields">
+          <label for="pages">Pages</label>
+          <input type="text" id="pages" placeholder="number of pages" />
+        </div>
 
-            <div class="fields">
-                <label for="pages">Pages</label>
-                <input type="text" id="pages">
-            </div>
+        <div class="fields">
+          <label for="isbn">ISBN#</label>
+          <input type="text" id="isbn" placeholder="isbn number" />
+        </div>
 
-            <div class="fields">
-                <label for="isbn">ISBN#</label>
-                <input type="text" id="isbn">
-            </div>
+        <input type="submit" value="Submit" class="submit-btn" />
+      </form>
 
-            <input type="submit" value="Submit" class="submit-btn">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Read</th>
+            <th>ISBN#</th>
+            <th></th>
+          </tr>
+        </thead>
 
-        </form>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Pages</th>
-                    <th>Read</th>
-                    <th>ISBN#</th>
-                    <th></th>
-                </tr>
-            </thead>
-
-<!-- This is where the books will be added using submit in App.js -->           
-            <tbody id="book-list">
-            </tbody>
-
-        </table>
-
+        <!-- This is where the books will be added using submit in App.js -->
+        <tbody id="book-list"></tbody>
+      </table>
     </div>
-    
 
-    <script src="app.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
