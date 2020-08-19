@@ -73,7 +73,7 @@ class UI {
         form.classList.remove('open-form');
 
         addBtn.style.visibility = 'visible';
-        /*  */document.querySelector('#title').value = '';
+        document.querySelector('#title').value = '';
         document.querySelector('#author').value = '';
         document.querySelector('#pages').value = '';
         document.querySelector('#isbn').value = '';

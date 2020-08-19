@@ -1,9 +1,4 @@
-document.querySelector(".add-btn").addEventListener("click", hideBtn);
-function hideBtn(e) {
-  const form = document.querySelector(".form");
-  document.querySelector(".add-btn").style.visibility = "hidden";
-  form.classList.add("open-form");
-}
+
 
 //Book Class: Represents a book
 class Book {
@@ -17,6 +12,7 @@ class Book {
 
 //UI Class: Handles UI dispays and tasks
 class UI {
+
   static displayBooks() {
     const library = Store.getBooks();
     library.forEach((book) => UI.addBookToList(book));
@@ -62,6 +58,7 @@ class UI {
   static clearFormFields() {
     //Removes form after submitting book
     const form = document.querySelector(".form");
+    let addBtn = document.querySelector('.add-btn')
     form.classList.remove("open-form");
 
     addBtn.style.visibility = "visible";
@@ -72,7 +69,7 @@ class UI {
   }
 }
 
-document.querySelector(".add-btn", hideBtn);
+
 //Store Class: Handles Local Storage
 class Store {
   static getBooks() {
@@ -102,6 +99,17 @@ class Store {
     localStorage.setItem("library", JSON.stringify(library));
   }
 }
+
+
+function hideBtn(e) {
+  const form = document.querySelector('.form');
+  let addBtn = document.querySelector('.add-btn');
+  addBtn.style.visibility = 'hidden';
+  form.classList.add('open-form')
+}
+
+//Event: Display Form
+document.querySelector('.add-btn').addEventListener('click', hideBtn)
 
 //Event: Display Books
 document.addEventListener("DOMContentLoaded", UI.displayBooks);
